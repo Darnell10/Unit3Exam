@@ -48,11 +48,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        * TODO: add logic to set values to views:
-        * TODO: 1. if there is a username value AND checkbox value in shared preferences - set the username EditText's value to the username value from shared preferences, and set the checkbox's value to the checkbox value from shared preferences
-
-         */
         if(!sharedPreferences.getString(USERNAME_TAG,"Error").equals("Error")){
             emailView.setText(sharedPreferences.getString(USERNAME_TAG,"error"));
             usernameCheckbox.setChecked(sharedPreferences.getBoolean(PASSWORD_TAG,false));
@@ -108,16 +103,6 @@ public class LoginActivity extends AppCompatActivity {
             }else{
                 Toast.makeText(this, "NA Brah", Toast.LENGTH_SHORT).show();
             }
-
-            
-            /*
-             * TODO: Add logic to confirm that:
-             * TODO: 2. the username matches the username stored in strings.xml and the password matches the password stored in strings.xml
-             * TODO: 3. the checkbox is ticked - if both email and password in EditTexts match strings.xml, add username value and checkbox value to shared preferences
-             * TODO: 4. the checkbox is NOT ticked - if it is not ticked, clear username in shared preferences
-             * TODO: 5. if both email and password in EditTexts match strings.xml, move to RecyclerActivity
-             */
-
         }
 
         if (cancel) {
